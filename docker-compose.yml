@@ -16,7 +16,7 @@ services:
   wordpress:
     container_name: wordpress
     depends_on:
-      - db
+      - mysql
     image: wordpress:latest
     volumes:
       - ./wordpress_data:/var/www/html
