@@ -11,12 +11,12 @@ services:
       MYSQL_ROOT_PASSWORD: d2Oqadruj9*
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
-      MYSQL_PASSWORD: d2Oqadruj9*
+      MYSQL_PASSWORD: wordpress
 
   wordpress:
     container_name: wordpress
     depends_on:
-      - mysql
+      - db
     image: wordpress:latest
     volumes:
       - ./wordpress_data:/var/www/html
